@@ -38,7 +38,7 @@ https://teste-front-end-jr-two.vercel.app/
 
 ------------
 ### Layout do projeto
-Para acessar o layout do projeto basta clicar no [link](http://https://www.figma.com/file/rWnzPeoxgynuNPsJjV0VmV/Teste-Front-End-Jr?node-id=1%3A1248&t=g5nLYfBfAAal21Tg-0 "link")
+Para acessar o layout do projeto basta clicar no [link](https://www.figma.com/file/rWnzPeoxgynuNPsJjV0VmV/Teste-Front-End-Jr?node-id=0%3A1&t=unxAlNvgz1LKuWw1-0)
 
 
 
