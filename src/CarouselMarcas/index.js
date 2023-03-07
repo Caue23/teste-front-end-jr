@@ -4,36 +4,36 @@ import styles from './CarouselMarcas.module.scss';
 
 
 const empresas = [
-    { ID: 1, photo:'/images/vtex.png'  },
-    { ID: 2, photo:'/images/vtex.png' },
-    { ID: 3, photo:'/images/vtex.png' },
-    { ID: 4, photo:'/images/vtex.png' },
-    { ID: 5, photo:'/images/vtex.png' },
-    { ID: 6, photo:'/images/vtex.png' },
-    { ID: 7, photo:'/images/vtex.png' },
+  { ID: 1, photo: '/images/vtex.png' },
+  { ID: 2, photo: '/images/vtex.png' },
+  { ID: 3, photo: '/images/vtex.png' },
+  { ID: 4, photo: '/images/vtex.png' },
+  { ID: 5, photo: '/images/vtex.png' },
+  { ID: 6, photo: '/images/vtex.png' },
+  { ID: 7, photo: '/images/vtex.png' },
 ]
 
 
-export default function Marcas (){
-    const [activeSlideIndex,setActiveSlideIndex] = useState(0);
+export default function Marcas() {
+  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
 
-    function getMarcas(){
-        return empresas.map((empresa)=>{
-            return (
-                <div >
-                    <section className={styles.groupMarcas}>
-                        <a href="#"><img src={empresa.photo}/></a>
-                    </section>
-                </div>
-            )
-        })
-    };
-    return(
-        <div className={styles.containerMarcas}>
-            <h1>Navegue por marcas</h1>
-        <ReactSimplyCarousel
-        
+  function getMarcas() {
+    return empresas.map((empresa) => {
+      return (
+        <div >
+          <section className={styles.groupMarcas}>
+            <a href="#"><img src={empresa.photo} /></a>
+          </section>
+        </div>
+      )
+    })
+  };
+  return (
+    <div className={styles.containerMarcas}>
+      <h1>Navegue por marcas</h1>
+      <ReactSimplyCarousel
+
         activeSlideIndex={activeSlideIndex}
         onRequestChange={setActiveSlideIndex}
         itemsToShow={1}
@@ -42,7 +42,7 @@ export default function Marcas (){
           style: {
             alignSelf: 'center',
             border: 'none',
-            background:'#ffffff',
+            background: '#ffffff',
             borderRadius: '50%',
             color: '#0080BF',
             cursor: 'pointer',
@@ -51,11 +51,11 @@ export default function Marcas (){
             height: 30,
             textAlign: 'center',
             width: 30,
-            
+
           },
           children: <span>{`>`}</span>,
         }}
-       
+
         responsiveProps={[
           {
             itemsToShow: 5,
@@ -70,6 +70,6 @@ export default function Marcas (){
         {getMarcas()}
 
       </ReactSimplyCarousel>
-        </div>
-    )
+    </div>
+  )
 }

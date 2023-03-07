@@ -1,4 +1,4 @@
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ReactSimplyCarousel from 'react-simply-carousel';
 import styles from './Carousel.module.scss';
 import Modal from 'react-modal';
@@ -13,18 +13,18 @@ function ReactSimplyCarouselExample() {
   const [modalData, setModalData] = useState([]);
   const [isNewTransactionModalOpen, serIsNewTransactionModalOpen] = useState(false);
 
- 
-  
+
+
 
   useEffect(() => {
-      fetch("https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json")
-      .then((data)=>data.json())
-      .then((data)=> setProdu(data.products))
+    fetch("https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json")
+      .then((data) => data.json())
+      .then((data) => setProdu(data.products))
   }, [])
 
 
-  function getLinhas(){
-    return produ.map((prod)=>{
+  function getLinhas() {
+    return produ.map((prod) => {
 
       produ[5].price = 3800
       produ[6].price = 4200
@@ -34,48 +34,48 @@ function ReactSimplyCarouselExample() {
 
       const formatter = new Intl.NumberFormat('pt-BR', {
         style: 'currency',
-        currency: 'BRL' 
+        currency: 'BRL'
       });
-      const valores= prod.price
-      const percentual = valores * (5/100)
-      const parcelas = valores  / 2
-      const valorAntigo = valores  + percentual
+      const valores = prod.price
+      const percentual = valores * (5 / 100)
+      const parcelas = valores / 2
+      const valorAntigo = valores + percentual
       const formatted = formatter.format(prod.price);
       const realFormatted = formatter.format(valorAntigo);
       const parcelaFormatted = formatter.format(parcelas);
 
 
-        return (
-            <div className={styles.cardGroup}>
-                <section className={styles.card}>
-                <img src={prod.photo} alt="..." />
-                <h1>{prod.descriptionShort}</h1>
-                <h2>{realFormatted}</h2>
-                <h3>{formatted}</h3>
-                <p>ou 2x de {parcelaFormatted} sem juros</p>
-                <a>Frete grátis</a>
-                <button onClick={()=> {handleOpenNewTransactionModal(true);setModalData(prod);}}>Comprar</button>
-                </section>
-            </div>
-        )
+      return (
+        <div className={styles.cardGroup}>
+          <section className={styles.card}>
+            <img src={prod.photo} alt="..." />
+            <h1>{prod.descriptionShort}</h1>
+            <h2>{realFormatted}</h2>
+            <h3>{formatted}</h3>
+            <p>ou 2x de {parcelaFormatted} sem juros</p>
+            <a>Frete grátis</a>
+            <button onClick={() => { handleOpenNewTransactionModal(true); setModalData(prod); }}>Comprar</button>
+          </section>
+        </div>
+      )
     })
-};
-function handleOpenNewTransactionModal(){
-  serIsNewTransactionModalOpen(true);
-}
-function handleCloseNewTransactionModal(){
-  serIsNewTransactionModalOpen(false);  
-} 
-const formatter = new Intl.NumberFormat('pt-BR', {
-  style: 'currency',
-  currency: 'BRL' 
-});
-const formatted = formatter.format(modalData.price);
+  };
+  function handleOpenNewTransactionModal() {
+    serIsNewTransactionModalOpen(true);
+  }
+  function handleCloseNewTransactionModal() {
+    serIsNewTransactionModalOpen(false);
+  }
+  const formatter = new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  });
+  const formatted = formatter.format(modalData.price);
 
   return (
     <div className={styles.groupCard}>
       <ReactSimplyCarousel
-        
+
         activeSlideIndex={activeSlideIndex}
         itemsToShow={1}
         itemsToScroll={1}
@@ -83,7 +83,7 @@ const formatted = formatter.format(modalData.price);
           style: {
             alignSelf: 'center',
             border: 'none',
-            background:'#ffffff',
+            background: '#ffffff',
             borderRadius: '50%',
             color: '#3F3F40',
             cursor: 'pointer',
@@ -99,7 +99,7 @@ const formatted = formatter.format(modalData.price);
           style: {
             alignSelf: 'center',
             border: 'none',
-            background:'#ffffff',
+            background: '#ffffff',
             borderRadius: '50%',
             color: '#3F3F40',
             cursor: 'pointer',
@@ -126,8 +126,8 @@ const formatted = formatter.format(modalData.price);
 
       </ReactSimplyCarousel>
       <Modal
-        isOpen={isNewTransactionModalOpen} 
-        onRequestClose = {()=>handleCloseNewTransactionModal(true)}
+        isOpen={isNewTransactionModalOpen}
+        onRequestClose={() => handleCloseNewTransactionModal(true)}
         ariaHideApp={false}
         overlayClassName='react-modal-overlay'
         className={styles.reactModalContent}
@@ -143,7 +143,7 @@ const formatted = formatter.format(modalData.price);
             </li>
           </ul>
           <button type='submit' onClick={handleCloseNewTransactionModal} >
-          <FiX />
+            <FiX />
           </button>
         </div>
       </Modal>

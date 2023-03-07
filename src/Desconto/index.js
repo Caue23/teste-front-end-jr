@@ -83,8 +83,8 @@ export default function Desconto() {
         <h1>Produtos relacionados</h1>
         <p>Ver todos</p>
       </section>
-        <Carousel />
-        <section className={styles.parceiros}>
+      <Carousel />
+      <section className={styles.parceiros}>
         <span >
           <text>
             <h1>Produtos</h1>
@@ -102,13 +102,13 @@ export default function Desconto() {
           </span>
         </section>
       </section>
-      <CarouselMarcas/>
+      <CarouselMarcas />
       <section className={styles.titleProdutos}>
         <h1>Produtos relacionados</h1>
         <p>Ver todos</p>
       </section>
-        <Carousel />
-        <Footer/>
+      <Carousel />
+      <Footer />
     </div>
   )
 }
