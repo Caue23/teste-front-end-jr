@@ -1,0 +1,147 @@
+.groupCard{
+    width: 1366px;
+    display: inline;
+    padding: 1.06rem 0 0 0.37rem;
+}
+.card{
+    display: grid;
+    height: 500px;
+    width: 260px;
+    border-radius: 10px;
+    margin: 0  1.93rem 0 1.93rem ;
+    background-color: var(--white);
+    box-shadow: 0px 3px 19px rgba(0, 0, 0, 0.22);
+
+    h1{
+        font-weight: 300;
+        font-size: 15px;   
+        padding: 0 0 0 0.68rem; 
+        align-self: center;
+        color:var(--gray-650)
+    }
+    h2{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px; 
+        padding: 0 0 0 0.68rem; 
+        align-self: self-end;
+        color:var(--gray-650);
+        text-decoration: line-through;
+    }
+    h3{
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        padding: 0 0 0 0.68rem; 
+        align-self: center;
+        color:var(--gray-650)
+    }
+    p{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;  
+        padding: 0 0 0 0.68rem; 
+        color:var(--gray-650)
+    }
+    a{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        padding: 0 0 0 0.68rem; 
+        color: var(--pink-400);
+    }
+
+    button{ 
+    width: 245px;
+    height: 44px;
+    border-radius: 4px;
+    justify-self: center;
+    color: var(--white);
+    background-color: var(--pink-400);
+    border:1px solid var(--pink-400);
+
+    }
+
+}
+
+.reactModalContent{
+    width: 769px;
+    height: 299.25px;
+    max-width: 1000px;
+    background: var(--white);
+    padding: 2rem 1rem 3rem 4rem;;
+    position: relative;
+    border-radius: 0.24rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+.modalInfo{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    ul{
+        width: 330px;
+        margin: 3rem 0 0 3rem;
+    }
+
+    button{
+        width: 21px;
+        height: 21px;
+        justify-self: center;
+        border: 0;
+    }
+    h1{
+        font-family: 'Lato';
+        font-weight: 400;
+        font-size: 20px;
+        font-weight: 400;
+        font-size: 20px;
+        letter-spacing: 0.05em;
+        color: var(--blue-700);
+        padding: 0 0 1.31rem 0;
+    }
+    text{
+        font-family: 'Lato';
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0.05em;
+        color: var(--blue-700);
+        
+
+    }
+    p{
+        width: 290px;
+        height: 18.55px;
+        font-family: 'Lato';
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 100%;
+        letter-spacing: 0.05em;
+        color: var(--gray-800);
+        margin: 1.10rem 0 1.10rem 0;
+
+    }
+    a{
+        font-family: 'Lato';
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 0.05em;
+        color: var(--blue-700);
+        text-decoration: none;
+    }
+    img{
+        margin: 2.2rem 0 0 0;
+    }
+    
+}
+
+@media screen and (min-width:1440px) {
+    .card{
+        width: 270px;
+    }
+
+}

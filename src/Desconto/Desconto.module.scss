@@ -1,0 +1,179 @@
+.container{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%), url(../../public/images/desconto.png) ;
+    background-repeat: no-repeat;
+    height: 395px;
+    
+}
+
+.content{
+    padding: 0 0 2.12rem 0;
+    h1{
+        width: 800px;
+        font-weight: 600;
+        font-size: 48px;
+        padding: 3.25rem 0 0 5.75rem;
+    }
+    text{
+        display: flex;
+        font-weight: 600;
+        font-size: 36px;
+        padding: 0 0 0 5.75rem;
+    }
+    button{
+        width: 227px;
+        height: 60px;
+        border-radius: 5px;
+        border: 1px solid var(--pink-400);
+        background-color: var(--pink-400);
+        margin: 2.18rem 0 3.12rem 5.75rem;
+        color: var(--white);
+    }
+}
+.contentList{
+    width: 1277px;
+    height: 174px;
+    padding: 0 0 0 5.37rem;
+}
+
+.list{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+
+    li{
+        display: block;
+        cursor: pointer;
+
+
+    }
+    span{
+        display: flex;
+        width: 128px;
+        height: 128px;
+        
+        justify-content: center;
+        background: #F4F4F4;
+        box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.13);
+        border-radius: 10px;
+    }
+    img{
+        width: 61px;
+        height: 61px;
+        align-self: center;
+    }
+    a{
+        display: flex;
+        justify-content: center;
+        padding: 1.37rem  0 0 0; 
+        color: var(--gray-500);
+        font-weight: 500;
+        font-size: 16px;
+    }
+    p{
+        display: flex;
+        justify-content: center;
+        padding: 1.37rem  0 0 0; 
+        color: var(--pink-400);
+        font-weight: 500;
+        font-size: 16px;
+    }
+}
+
+.parceiros{
+    display: flex;
+    width: 1266px;
+    margin: 4.75rem 0 0 2.7rem;
+    span{
+        background-image: url(../../public/images/parceiros.png);
+        width: 574px;
+        height: 350px;
+        
+    }
+    section{
+        background-image: url(../../public/images/parceiros.png);
+        width: 574px;
+        height: 350px;
+        margin: 0 0 0 6.56rem;
+
+        
+    }
+    h1{
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 60px;
+        padding: 7rem 0 0 2.5rem;
+    }
+    p{
+        width: 250px;
+        height: 48px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 0.5rem 0 0 2.5rem;
+    }
+    button{
+        width: 131px;
+        height: 48px;
+        margin: 2.6rem 0 0 2.5rem;
+        border-radius: 10px;
+        border: 1px solid var(--pink-400);
+        background-color: var(--pink-400);
+        color: var(--white);
+    }
+
+}
+
+.titleProdutos{
+    padding: 6.5rem 0 0.2rem 0;
+    h1{
+        text-align: center;
+        font-weight: 700;
+        font-size: 30px;
+        color: var(--pink-400);
+        
+    }
+
+    P{
+        cursor: pointer;
+        text-align: center;
+        font-weight: 700;
+        font-size: 15px;
+        color: var(--gray-650)
+    }
+}
+.titleProdutos h1::before{
+    background-color: rgba(222, 222, 222, 1);
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 360px;
+    margin: 0 2.12rem 0 0;
+    
+}
+.titleProdutos h1::after{
+    background-color: rgba(222, 222, 222, 1);
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 360px;
+    margin: 0 0 0 2.12rem;
+    
+}
+
+@media screen and (min-width:1440px) {
+    .list{
+        width: 1350px;
+    }
+
+    .contentList{
+        padding: 0 0 0 4rem;
+    }
+    .parceiros{
+        margin: 3.75rem 0 0 5.5rem;
+    }
+    
+}

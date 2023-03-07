@@ -1,0 +1,111 @@
+.container{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(1, 0.9fr);
+}
+.content{
+    display: flex;
+    width: 1280px;
+    height: 22px;
+    justify-content: center;
+}
+.list{
+    display:flex;
+    font-size: 12px;
+    font-weight: 600;
+
+    li{
+        display: flex;
+        padding: 0 2.7rem;
+    }
+    img{
+        align-self: center;
+        width: 20px;
+        height: 20px;
+    }
+    text{
+        align-self: center;
+        padding: 0.5rem;
+    }
+    span{
+        display:flex;
+        align-items: center;
+        padding: 0.3rem;
+        color: var(--pink-400)
+    }
+    p{
+        padding: 0.3rem;
+        color: var(--gray-300)
+    }
+    a{
+        padding: 0.3rem;
+        color: var(--pink-400)
+    }
+}
+
+
+.search{
+    display: grid;
+    width: 1280px;
+    height: 72px;
+    grid-template-columns: repeat(1, 0.44fr 0.6fr 0.14fr 0.12fr 0.12fr 0.12fr);
+
+    span{
+        align-self: flex-end;
+        justify-self: center;
+    }
+    input{
+        background-image: url('../../public/images/lupa.png');
+        background-repeat: no-repeat;
+        background-position: right;
+        width: 657px;
+        height: 48px;
+        border-radius: 10px; 
+        
+        align-self: center;
+    }
+    input::-webkit-input-placeholder {
+        font-weight: 500;
+        font-size: 14px;
+        left: 20px;
+        color: var(--gray-300);
+        padding: 0 20px;
+      }
+    img{
+        cursor: pointer;
+        justify-self: end;
+        align-self: center;
+    }
+}
+
+.categories{
+    width: 1280px;
+    height: 40px;
+    font-weight: 600;
+    font-size: 12px;
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 91px;
+        margin: 0.5rem 0 0 0;
+    }
+    p{
+        cursor: pointer;
+        color: var(--gray-300)
+    }
+    a{
+        cursor: pointer;
+        color: var(--pink-400)
+    }
+    
+    li{
+        display: flex;
+    }
+    img{
+        padding: 0 0.5rem 0 0;
+    }
+}
